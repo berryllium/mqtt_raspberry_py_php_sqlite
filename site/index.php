@@ -8,27 +8,18 @@ require_once('model.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MQTT Raspberry</title>
-    <style>
-    table {
-        margin: 0 auto;
-        min-width: 500px;
-        border-collapse: collapse;
-    }
-    th,td {
-        border: 1px solid black;
-        text-align: center;
-    }
-    h1 {
-        text-align: center;
-    }
-    form {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    select {
-        min-width: 200px;
-    }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="../examples.css" rel="stylesheet" type="text/css">
+	<script language="javascript" type="text/javascript" src="../../source/jquery.js"></script>
+	<script language="javascript" type="text/javascript" src="../../source/jquery.canvaswrapper.js"></script>
+	<script language="javascript" type="text/javascript" src="../../source/jquery.colorhelpers.js"></script>
+	<script language="javascript" type="text/javascript" src="../../source/jquery.flot.js"></script>
+	<script language="javascript" type="text/javascript" src="../../source/jquery.flot.saturated.js"></script>
+	<script language="javascript" type="text/javascript" src="../../source/jquery.flot.browser.js"></script>
+	<script language="javascript" type="text/javascript" src="../../source/jquery.flot.drawSeries.js"></script>
+	<script language="javascript" type="text/javascript" src="../../source/jquery.flot.uiConstants.js"></script>
+	<script language="javascript" type="text/javascript" src="../../source/jquery.flot.time.js"></script>
+	<script language="javascript" type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
@@ -48,6 +39,9 @@ require_once('model.php');
         <button onclick="document.querySelector('form').submit()">Показать</button>           
     </div>
     </form>
+    <div id="content">
+		<div class="demo-container"><div id="placeholder" class="demo-placeholder"></div></div>
+	</div>
     <table>
     <tr>
         <th>ID</th>
@@ -64,6 +58,6 @@ require_once('model.php');
 <?php endforeach;?>
 <?php endif;?>
 </table>
-
+<script src="js/script.js"></script>
 </body>
 </html>
