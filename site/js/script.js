@@ -6,7 +6,7 @@ function getJson() {
     success: function(response) {
 
     all_data = [{data: response}];
-    console.log(all_data)
+
     // свойства графика
     var plot_conf = {
     series: {
