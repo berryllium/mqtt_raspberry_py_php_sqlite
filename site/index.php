@@ -36,7 +36,8 @@ require_once('model.php');
         <p>Выберите промежуток времени</p>
         <input type="datetime-local" name="from" value="<?=@$_GET['from']?>">           
         <input type="datetime-local" name="to" value="<?=@$_GET['to']?>">
-        <button onclick="document.querySelector('form').submit()">Показать</button>           
+        <button onclick="document.querySelector('form').submit()">Таблица</button>           
+        <button type="button" onclick="getJson()">График</button>           
     </div>
     </form>
     <div id="content">

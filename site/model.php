@@ -16,16 +16,18 @@ if($result) {
     }  
 }
 
+$order = $order ?: 'DESC';
+
 if($current_topic = $_GET['topic']) {
     $from = gmdate('Y-m-d H:i:s', strtotime($_GET['from']));
     $to = gmdate('Y-m-d H:i:s', strtotime($_GET['to']));
     if(!$from) $from = gmdate('Y-m-d H:i:s', time());
     if(!$from) $from = gmdate('Y-m-d H:i:s', time() - 600);
     $query = "SELECT ID, MESSAGE, datetime(DATE_INSERT, 'localtime') AS DATE_INSERT 
-    FROM '$current_topic' 
+    FROM $current_topic 
     WHERE DATE_INSERT >= '$from' 
     AND DATE_INSERT <= '$to' 
-    ORDER BY ID DESC";
+    ORDER BY ID $order";
     $result = $db->query($query);
     while ($row = $result->fetchArray()) {
         $data[] = $row;
