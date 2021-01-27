@@ -6,7 +6,7 @@ from store_Sensor_Data_to_DB import sensor_Data_Handler
 MQTT_Broker = "5.16.22.44"
 MQTT_Port = 1883
 Keep_Alive_Interval = 45
-MQTT_Topic = "temperatura"
+MQTT_Topic = "#"
 
 #Subscribe to all Sensors at Base Topic
 def on_connect(mosq, obj, rc, t):

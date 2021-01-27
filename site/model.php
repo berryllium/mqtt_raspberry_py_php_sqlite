@@ -5,6 +5,7 @@ ini_set('error_reporting', 1);
 
 $db_file = 'IoT.db';
 $db = new SQLite3($db_file);
+$db_size = round(filesize($db_file) / (1024*1000), 2);
 
 $data = [];
 $tables = [];

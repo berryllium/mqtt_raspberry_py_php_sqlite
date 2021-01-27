@@ -32,7 +32,7 @@ require_once('model.php');
 </head>
 
 <body>
-<h1>Информация из топиков</h1>
+<h1>Информация из топиков (<?=$db_size?> Mb)</h1>
     <form>
     <div class="select">
         <p>Выберите топик из списка</p>

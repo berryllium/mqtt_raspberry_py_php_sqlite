@@ -42,6 +42,6 @@ def sensor_Data_Handler(Topic, Message):
 	dbObj.query("INSERT INTO " + Topic + "  (MESSAGE) VALUES (?)", [Message])
 
 	# Удаляем старые записи
-	dbObj.query("DELETE FROM " + Topic + " WHERE DATE_INSERT < datetime('NOW','-1 DAY')")
+	#dbObj.query("DELETE FROM " + Topic + " WHERE DATE_INSERT < datetime('NOW','-1 DAY')")
 
 #===============================================================
