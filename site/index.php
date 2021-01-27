@@ -8,17 +8,17 @@ require_once('model.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MQTT Raspberry</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="../examples.css" rel="stylesheet" type="text/css">
-	<script language="javascript" type="text/javascript" src="../../source/jquery.js"></script>
-	<script language="javascript" type="text/javascript" src="../../source/jquery.canvaswrapper.js"></script>
-	<script language="javascript" type="text/javascript" src="../../source/jquery.colorhelpers.js"></script>
-	<script language="javascript" type="text/javascript" src="../../source/jquery.flot.js"></script>
-	<script language="javascript" type="text/javascript" src="../../source/jquery.flot.saturated.js"></script>
-	<script language="javascript" type="text/javascript" src="../../source/jquery.flot.browser.js"></script>
-	<script language="javascript" type="text/javascript" src="../../source/jquery.flot.drawSeries.js"></script>
-	<script language="javascript" type="text/javascript" src="../../source/jquery.flot.uiConstants.js"></script>
-	<script language="javascript" type="text/javascript" src="../../source/jquery.flot.time.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/flot.css">
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.js"></script>
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.canvaswrapper.js"></script>
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.colorhelpers.js"></script>
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.js"></script>
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.saturated.js"></script>
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.browser.js"></script>
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.drawSeries.js"></script>
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.uiConstants.js"></script>
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.time.js"></script>
 	<script language="javascript" type="text/javascript" src="js/script.js"></script>
 </head>
 
@@ -36,8 +36,7 @@ require_once('model.php');
         <p>Выберите промежуток времени</p>
         <input type="datetime-local" name="from" value="<?=@$_GET['from']?>">           
         <input type="datetime-local" name="to" value="<?=@$_GET['to']?>">
-        <button onclick="document.querySelector('form').submit()">Таблица</button>           
-        <button type="button" onclick="getJson()">График</button>           
+        <button onclick="document.querySelector('form').submit()">Получить</button>                   
     </div>
     </form>
     <div id="content">
